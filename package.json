@@ -1,0 +1,19 @@
+{
+  "name": "preentrega3pardo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sebap84/terceraPreEntrega.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sebap84/terceraPreEntrega/issues"
+  },
+  "homepage": "https://github.com/Sebap84/terceraPreEntrega#readme"
+}

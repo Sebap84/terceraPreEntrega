@@ -1,0 +1,83 @@
+@mixin contenedor($bgColor, $gridTemplateColumns, $gridTemplateRows, $gridTemplateAreas){
+    background-color: $bgColor;
+    width: 90%;
+    height: 150vh;
+    // border: solid black 3px; 
+    font-size: 2rem;
+    text-align: center;
+    margin:10px auto;
+
+    display: grid;
+    grid-template-columns: $gridTemplateColumns;
+    grid-template-rows: $gridTemplateRows;
+    grid-template-areas: $gridTemplateAreas;
+
+}
+
+.contenedorIndex{
+
+    @include contenedor ($fondoSitio,1fr 1fr 1fr,1fr 1fr 3fr 1fr,"header header header"
+        "section1 section1 section1"
+        "section2 section3 section4"
+        "footer footer footer")
+}
+
+.contenedorNosotros{
+
+    @include contenedor (azure,
+    1fr 1fr,1fr
+    1fr 1fr 1fr 1fr 1fr 1fr,
+        "header header"
+        "opciones opciones"
+        "quienesSomos quienesSomos"
+        "equipo equipo"
+        "cargo1 cargo2"
+        "footer footer")
+}
+
+// .contenedor{
+//     background-color: $fondoImagenPrincipal;
+//     width: 90%;
+//     height: 150vh;
+//     border: solid black 3px; 
+//     font-size: 2rem;
+//     text-align: center;
+//     margin:10px auto;
+
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: 1fr 1fr 3fr 1fr;
+//     grid-template-areas: 
+//     "header header header"
+//     "section1 section1 section1"
+//     "section2 section3 section4"
+//     "footer footer footer";  
+// }
+
+@media screen and (max-width: 480px){
+    .contenedorIndex{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+        grid-template-areas: 
+            "header" 
+            "section1"
+            "section2" 
+            "section3"
+            "section4" 
+            "footer";  
+    }
+
+    .contenedorNosotros{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header" 
+            "opciones"
+            "quienesSomos" 
+            "equipo"
+            "cargo1" 
+            "cargo2"
+            "footer" ;
+    }
+
+}

@@ -1,0 +1,83 @@
+@mixin tipoSeccion1($gridArea, $bgImage){
+    
+    margin:20px auto;
+    background-image: $bgImage;
+    height: 50vh;
+    text-align: left;
+    grid-area: $gridArea;
+    width:100%;
+}
+
+@mixin tipoSeccion2($gridArea, $height, $bgColor, $textAlign){
+    background-color: $bgColor;
+    // border: solid black 3px; 
+    grid-area: $gridArea;
+    text-align: $textAlign;
+    height: $height;
+
+}
+
+.seccionImagenPrincipalIndex{
+
+    @include tipoSeccion1 (section1, url(../fotos/FondoIndex.jpg))
+}
+
+.seccion2Index{
+
+    @include tipoSeccion2 (section2,40vh,$fondoSitio,left)
+}
+
+.seccion3Index{
+
+    @include tipoSeccion2 (section3,40vh,$fondoSitio,left)
+}
+
+.seccion4Index{
+
+    @include tipoSeccion2 (section4,40vh,$fondoSitio,left)
+}
+
+// SECCIONES NOSOTROS.HTML
+
+.seccionOpciones{
+    margin-bottom: 20px;
+    @include tipoSeccion2 (opciones,15vh,$fondoSitio,left);
+    
+}
+
+.seccionQuienesSomos{
+
+    border-top: solid 1px;
+    padding-top: 10px;
+
+    @include tipoSeccion2 (quienesSomos,70vh,$fondoSitio,lef)
+    
+    
+}
+
+.seccionEquipo{
+
+    @include tipoSeccion2 (equipo,10vh,$fondoSitio,left)
+}
+
+.seccionCargo1{
+
+    @include tipoSeccion2 (cargo1,50vh,$fondoSitio,center)
+}
+
+.seccionCargo2{
+
+    @include tipoSeccion2 (cargo2,50vh,$fondoSitio,center)
+
+}
+
+@media screen and (max-width: 480px){
+
+    .seccionQuienesSomos{
+
+        @include tipoSeccion2 (quienesSomos,160vh,$fondoSitio,left)
+    }
+}
+
+
+
