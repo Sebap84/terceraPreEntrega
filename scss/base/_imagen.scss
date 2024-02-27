@@ -3,3 +3,28 @@
     margin-left: -10px;
     margin-top: 10px;
 }
+
+.imagenSoluciones{
+    width: 250px;
+}
+
+.DerechaImagen{
+    width: 250px;
+    height: 200px;
+    margin-left: 1100px;
+}
+
+@media screen and (max-width: 480px){
+    .imagenSoluciones{
+        width: 120px;
+        margin-left:140px;
+    }
+    .DerechaImagen{
+        width: 120px;
+        height: 120px;
+        margin-left: 140px;
+    }
+}
+
+
+

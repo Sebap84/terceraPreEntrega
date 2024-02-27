@@ -1,4 +1,4 @@
-@mixin contenedor($bgColor, $gridTemplateColumns, $gridTemplateRows, $gridTemplateAreas){
+@mixin contenedor($bgColor, $gridTemplateColumns, $gridTemplateRows, $gridTemplateAreas, $gap){
     background-color: $bgColor;
     width: 90%;
     height: 150vh;
@@ -12,6 +12,15 @@
     grid-template-rows: $gridTemplateRows;
     grid-template-areas: $gridTemplateAreas;
 
+    @if $gap != 0{
+        gap: $gap;
+    
+        }
+ 
+
+    // grid-auto-flow: row;
+    
+
 }
 
 .contenedorIndex{
@@ -19,21 +28,61 @@
     @include contenedor ($fondoSitio,1fr 1fr 1fr,1fr 1fr 3fr 1fr,"header header header"
         "section1 section1 section1"
         "section2 section3 section4"
-        "footer footer footer")
+        "footer footer footer",0)
 }
 
 .contenedorNosotros{
 
     @include contenedor (azure,
-    1fr 1fr,1fr
+    1fr 1fr,
     1fr 1fr 1fr 1fr 1fr 1fr,
         "header header"
         "opciones opciones"
         "quienesSomos quienesSomos"
         "equipo equipo"
         "cargo1 cargo2"
-        "footer footer")
+        "footer footer",0)
 }
+
+.contenedorSoluciones{
+
+    @include contenedor (azure,
+    1fr,
+    1fr 1fr 1fr 1fr 1fr,
+        "header"
+        "solucionesWeb"
+        "integraciones" 
+        "desktop"
+        "footer",0)
+    
+ 
+}
+
+// .subContenedorSolucionesWeb{
+
+//     @include contenedor (pink,
+//     1fr 1fr,
+//      1fr   ,
+//         // "header header"
+//         "imgSolucion txtSolucion")
+//         // "txtIntegracion txtIntegracion txtIntegracion imgIntegracion imgIntegracion1"
+//         // "imgDesktop imgDesktop txtDesktop txtDesktop"
+//         // "footer footer")
+ 
+// }
+
+// .subContenedorIntegraciones{
+
+//     @include contenedor (yellow,
+//     1fr 1fr,
+//      1fr  ,
+//         // "header header"
+//         "txtIntegracion imgIntegracion")
+//         // "txtIntegracion txtIntegracion txtIntegracion imgIntegracion imgIntegracion1"
+//         // "imgDesktop imgDesktop txtDesktop txtDesktop"
+//         // "footer footer")
+ 
+// }
 
 // .contenedor{
 //     background-color: $fondoImagenPrincipal;
@@ -77,7 +126,18 @@
             "equipo"
             "cargo1" 
             "cargo2"
-            "footer" ;
+            "footer";
+    }
+
+    .contenedorSoluciones{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header" 
+            "solucionesWeb"
+            "integraciones"
+            "desktop"
+            "footer";
     }
 
 }

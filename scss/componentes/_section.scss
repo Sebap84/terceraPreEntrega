@@ -8,12 +8,31 @@
     width:100%;
 }
 
-@mixin tipoSeccion2($gridArea, $height, $bgColor, $textAlign){
+@mixin tipoSeccion2($gridArea, $height, $bgColor, $textAlign, $width, $marginRight,$marginLeft,$paddingRight){
     background-color: $bgColor;
     // border: solid black 3px; 
     grid-area: $gridArea;
     text-align: $textAlign;
+    @if $height != 0{
     height: $height;
+
+    }
+    // @if $width > 0{
+    //     width: $width;
+    // }
+    // @if $marginRight != 0{
+    //     margin-right: $marginRight;
+    // }
+
+    // @if $marginLeft != 0{
+    //     margin-left:$marginLeft;
+    // }
+
+    // @if $paddingRight != 0{
+    //     padding-right:$paddingRight;
+    // }
+
+
 
 }
 
@@ -24,24 +43,24 @@
 
 .seccion2Index{
 
-    @include tipoSeccion2 (section2,40vh,$fondoSitio,left)
+    @include tipoSeccion2 (section2,40vh,$fondoSitio,left,0,0,0,0)
 }
 
 .seccion3Index{
 
-    @include tipoSeccion2 (section3,40vh,$fondoSitio,left)
+    @include tipoSeccion2 (section3,40vh,$fondoSitio,left,0,0,0,0)
 }
 
 .seccion4Index{
 
-    @include tipoSeccion2 (section4,40vh,$fondoSitio,left)
+    @include tipoSeccion2 (section4,40vh,$fondoSitio,left,0,0,0,0)
 }
 
 // SECCIONES NOSOTROS.HTML
 
 .seccionOpciones{
     margin-bottom: 20px;
-    @include tipoSeccion2 (opciones,15vh,$fondoSitio,left);
+    @include tipoSeccion2 (opciones,15vh,$fondoSitio,left,0,0,0,0);
     
 }
 
@@ -50,24 +69,38 @@
     border-top: solid 1px;
     padding-top: 10px;
 
-    @include tipoSeccion2 (quienesSomos,70vh,$fondoSitio,lef)
+    @include tipoSeccion2 (quienesSomos,70vh,$fondoSitio,left,0,0,0,0)
     
     
 }
 
 .seccionEquipo{
 
-    @include tipoSeccion2 (equipo,10vh,$fondoSitio,left)
+    @include tipoSeccion2 (equipo,10vh,$fondoSitio,left,0,0,0,0)
 }
 
 .seccionCargo1{
 
-    @include tipoSeccion2 (cargo1,50vh,$fondoSitio,center)
+    .ImgCargo{
+        width: 50%;
+        height: 250px;
+    }
+    
+
+    @include tipoSeccion2 (cargo1,50vh,$fondoSitio,center,0,0,0,0)
+
+  
+    
 }
 
 .seccionCargo2{
 
-    @include tipoSeccion2 (cargo2,50vh,$fondoSitio,center)
+    .ImgCargo{
+        width: 50%;
+        height: 250px;
+    }
+
+    @include tipoSeccion2 (cargo2,50vh,$fondoSitio,center,0,0,0,0)
 
 }
 
@@ -75,9 +108,89 @@
 
     .seccionQuienesSomos{
 
-        @include tipoSeccion2 (quienesSomos,160vh,$fondoSitio,left)
+        @include tipoSeccion2 (quienesSomos,160vh,$fondoSitio,left,0,0,0,0)
     }
+
+    .seccionCargo1{
+
+        .ImgCargo{
+            width: 70%;
+            height: 200px;
+        }
+    }
+
+    .seccionCargo2{
+
+        .ImgCargo{
+            width: 70%;
+            height: 200px;
+        }
+    }
+
 }
+
+// SECCIONES SOLUCIONES.HTML
+
+// .seccionImgSoluciones{
+//     // margin-bottom: 20px;
+//     @include tipoSeccion2 (imgSolucion,15vh,yellow,left,30%,0,50px,150px);
+    
+// }
+
+// .seccionTxtSoluciones{
+//     // margin-bottom: 20px;
+//     @include tipoSeccion2 (txtSolucion,15vh,green,left,70%,600px,100px,200px);
+    
+// }
+
+.seccionSolucionesWeb{
+    // margin-top: 10px;
+    @include tipoSeccion2 (solucionesWeb,35vh,azure,left,30%,0,50px,150px);
+    
+}
+
+
+// .seccionTxtIntegraciones{
+//     // margin-bottom: 20px;
+
+//     // grid-column-end: 2;
+
+//     @include tipoSeccion2 (txtIntegracion,15vh,red,left,70%,0,0,0);
+    
+// }
+
+// .seccionImgIntegraciones{
+//     // margin-bottom: 20px;
+//     @include tipoSeccion2 (imgIntegracion,15vh,brown,left,30%,0,0,0);
+    
+// }
+
+.seccionIntegraciones{
+    // margin-bottom: 20px;
+    @include tipoSeccion2 (integraciones,40vh,azure,left,30%,0,50px,150px);
+    
+}
+
+
+// .seccionImgDesktop{
+//     // margin-bottom: 20px;
+//     @include tipoSeccion2 (imgDesktop,0,gray,left,30%,0,0,0);
+    
+// }
+
+// .seccionTxtDesktop{
+//     // margin-bottom: 20px;
+//     @include tipoSeccion2 (txtDesktop,0,blue ,left,70%,0,0,0);
+    
+// }
+
+.seccionDesktop{
+    // margin-bottom: 20px;
+    @include tipoSeccion2 (desktop,35vh,azure,left,30%,0,50px,150px);
+    
+}
+
+
 
 
 

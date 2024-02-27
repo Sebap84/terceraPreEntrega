@@ -8,10 +8,62 @@ p{
    
 }
 
-// .parrafo{
-//     height: 100px;
-//     margin: 10px;
-//     padding: 10px;
-//     position: absolute;
-//     display: inline;
-// }
+.DerechaParrafo{
+    z-index: 1;
+    margin-top: -200px;
+    padding-left: 10px;
+    padding-top: 20px; 
+    margin-left: 300px;
+    position: relative;
+    width: 75%;
+    .p2{
+        text-align: justify;
+    }
+}
+
+.IzquierdaParrafo{
+    z-index: 1;
+    margin-top: -220px;
+    padding-left: 40px;
+    padding-top: 20px; 
+    position: relative;
+    width: 80%;
+    .p2{
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .DerechaParrafo{
+        // z-index: 1;
+        margin-top: -10px;
+        padding-left: 0px;
+        padding-top: 20px; 
+        margin-left: 10px;
+        position: relative;
+        width: 95%;
+        
+        .p2{
+            font-size: 12px;
+            text-align: justify;
+        }
+    }
+
+    .IzquierdaParrafo{
+        // z-index: 1;
+        margin-top: -10px;
+        padding-left: 0px;
+        padding-top: 20px; 
+        margin-left: 10px;
+        position: relative;
+        width: 95%;
+        
+        .p2{
+            font-size: 12px;
+            text-align: justify;
+        }
+    }
+
+}
+

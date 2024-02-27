@@ -24,8 +24,21 @@ body {
   margin: 10px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "header header" "opciones opciones" "quienesSomos quienesSomos" "equipo equipo" "cargo1 cargo2" "footer footer";
+}
+
+.contenedorSoluciones {
+  background-color: azure;
+  width: 90%;
+  height: 150vh;
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "header" "solucionesWeb" "integraciones" "desktop" "footer";
 }
 
 @media screen and (max-width: 480px) {
@@ -38,6 +51,11 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "header" "opciones" "quienesSomos" "equipo" "cargo1" "cargo2" "footer";
+  }
+  .contenedorSoluciones {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header" "solucionesWeb" "integraciones" "desktop" "footer";
   }
 }
 .header {
@@ -111,6 +129,27 @@ body {
   margin-top: 10px;
 }
 
+.imagenSoluciones {
+  width: 250px;
+}
+
+.DerechaImagen {
+  width: 250px;
+  height: 200px;
+  margin-left: 1100px;
+}
+
+@media screen and (max-width: 480px) {
+  .imagenSoluciones {
+    width: 120px;
+    margin-left: 140px;
+  }
+  .DerechaImagen {
+    width: 120px;
+    height: 120px;
+    margin-left: 140px;
+  }
+}
 .seccionImagenPrincipalIndex {
   margin: 20px auto;
   background-image: url(../fotos/FondoIndex.jpg);
@@ -154,7 +193,7 @@ body {
   padding-top: 10px;
   background-color: azure;
   grid-area: quienesSomos;
-  text-align: lef;
+  text-align: left;
   height: 70vh;
 }
 
@@ -171,12 +210,20 @@ body {
   text-align: center;
   height: 50vh;
 }
+.seccionCargo1 .ImgCargo {
+  width: 50%;
+  height: 250px;
+}
 
 .seccionCargo2 {
   background-color: azure;
   grid-area: cargo2;
   text-align: center;
   height: 50vh;
+}
+.seccionCargo2 .ImgCargo {
+  width: 50%;
+  height: 250px;
 }
 
 @media screen and (max-width: 480px) {
@@ -186,10 +233,40 @@ body {
     text-align: left;
     height: 160vh;
   }
+  .seccionCargo1 .ImgCargo {
+    width: 70%;
+    height: 200px;
+  }
+  .seccionCargo2 .ImgCargo {
+    width: 70%;
+    height: 200px;
+  }
 }
+.seccionSolucionesWeb {
+  background-color: azure;
+  grid-area: solucionesWeb;
+  text-align: left;
+  height: 35vh;
+}
+
+.seccionIntegraciones {
+  background-color: azure;
+  grid-area: integraciones;
+  text-align: left;
+  height: 40vh;
+}
+
+.seccionDesktop {
+  background-color: azure;
+  grid-area: desktop;
+  text-align: left;
+  height: 35vh;
+}
+
 .footer {
   background-color: azure;
   margin-top: 50px;
+  border-top: solid 1px;
   grid-area: footer;
 }
 
@@ -220,12 +297,82 @@ p {
   padding: 10px;
 }
 
+.DerechaParrafo {
+  z-index: 1;
+  margin-top: -200px;
+  padding-left: 10px;
+  padding-top: 20px;
+  margin-left: 300px;
+  position: relative;
+  width: 75%;
+}
+.DerechaParrafo .p2 {
+  text-align: justify;
+}
+
+.IzquierdaParrafo {
+  z-index: 1;
+  margin-top: -220px;
+  padding-left: 40px;
+  padding-top: 20px;
+  position: relative;
+  width: 80%;
+}
+.IzquierdaParrafo .p2 {
+  text-align: justify;
+}
+
+@media screen and (max-width: 480px) {
+  .DerechaParrafo {
+    margin-top: -10px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin-left: 10px;
+    position: relative;
+    width: 95%;
+  }
+  .DerechaParrafo .p2 {
+    font-size: 12px;
+    text-align: justify;
+  }
+  .IzquierdaParrafo {
+    margin-top: -10px;
+    padding-left: 0px;
+    padding-top: 20px;
+    margin-left: 10px;
+    position: relative;
+    width: 95%;
+  }
+  .IzquierdaParrafo .p2 {
+    font-size: 12px;
+    text-align: justify;
+  }
+}
 .nosotrosTitulo {
   margin: 20px;
   margin-left: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   padding: 0;
+}
+
+.solucionesWebTitulo {
+  text-align: left;
+  padding-left: 30px;
+}
+
+.integracionesTitulo {
+  text-align: right;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  .solucionesWebTitulo {
+    text-align: center;
+  }
+  .integracionesTitulo {
+    padding-right: 70px;
+  }
 }
 
 /*# sourceMappingURL=estilo.css.map */
