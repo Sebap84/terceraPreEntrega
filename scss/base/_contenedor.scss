@@ -1,8 +1,8 @@
-@mixin contenedor($bgColor, $gridTemplateColumns, $gridTemplateRows, $gridTemplateAreas, $gap){
+@mixin contenedor($bgColor, $gridTemplateColumns, $gridTemplateRows, $gridTemplateAreas, $gap, $width){
     background-color: $bgColor;
-    width: 90%;
+    width: $width;
     height: 150vh;
-    // border: solid black 3px; 
+    // border: solid 1px; 
     font-size: 2rem;
     text-align: center;
     margin:10px auto;
@@ -18,9 +18,6 @@
         }
  
 
-    // grid-auto-flow: row;
-    
-
 }
 
 .contenedorIndex{
@@ -28,12 +25,12 @@
     @include contenedor ($fondoSitio,1fr 1fr 1fr,1fr 1fr 3fr 1fr,"header header header"
         "section1 section1 section1"
         "section2 section3 section4"
-        "footer footer footer",0)
+        "footer footer footer",0,90%)
 }
 
 .contenedorNosotros{
 
-    @include contenedor (azure,
+    @include contenedor ($fondoSitio,
     1fr 1fr,
     1fr 1fr 1fr 1fr 1fr 1fr,
         "header header"
@@ -41,67 +38,45 @@
         "quienesSomos quienesSomos"
         "equipo equipo"
         "cargo1 cargo2"
-        "footer footer",0)
+        "footer footer",0,90%)
 }
 
 .contenedorSoluciones{
 
-    @include contenedor (azure,
+    @include contenedor ($fondoSitio,
     1fr,
     1fr 1fr 1fr 1fr 1fr,
         "header"
         "solucionesWeb"
         "integraciones" 
         "desktop"
-        "footer",0)
+        "footer",20px,90%)
     
- 
 }
 
-// .subContenedorSolucionesWeb{
+.contenedorPortafolio{
 
-//     @include contenedor (pink,
-//     1fr 1fr,
-//      1fr   ,
-//         // "header header"
-//         "imgSolucion txtSolucion")
-//         // "txtIntegracion txtIntegracion txtIntegracion imgIntegracion imgIntegracion1"
-//         // "imgDesktop imgDesktop txtDesktop txtDesktop"
-//         // "footer footer")
- 
-// }
+    @include contenedor ($fondoSitio,
+    1fr,
+    1fr 1fr 1fr,
+        "header"
+        "portafolio"
+        "footer",0,90%)
+    
+}
 
-// .subContenedorIntegraciones{
+.contenedorContacto{
 
-//     @include contenedor (yellow,
-//     1fr 1fr,
-//      1fr  ,
-//         // "header header"
-//         "txtIntegracion imgIntegracion")
-//         // "txtIntegracion txtIntegracion txtIntegracion imgIntegracion imgIntegracion1"
-//         // "imgDesktop imgDesktop txtDesktop txtDesktop"
-//         // "footer footer")
- 
-// }
+    @include contenedor ($fondoSitio,
+    1fr,
+    1fr 1fr 1fr,
+        "header"
+        "contacto"
+        "footer",0,90%)
+    
+}
 
-// .contenedor{
-//     background-color: $fondoImagenPrincipal;
-//     width: 90%;
-//     height: 150vh;
-//     border: solid black 3px; 
-//     font-size: 2rem;
-//     text-align: center;
-//     margin:10px auto;
 
-//     display: grid;
-//     grid-template-columns: 1fr 1fr 1fr;
-//     grid-template-rows: 1fr 1fr 3fr 1fr;
-//     grid-template-areas: 
-//     "header header header"
-//     "section1 section1 section1"
-//     "section2 section3 section4"
-//     "footer footer footer";  
-// }
 
 @media screen and (max-width: 480px){
     .contenedorIndex{
@@ -140,4 +115,97 @@
             "footer";
     }
 
+    .contenedorPortafolio{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header" 
+            "portafolio"
+            "footer";
+    }
+
+    .contenedorContacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header" 
+            "contacto"
+            "footer";
+    }
+
+
 }
+
+@media screen and (min-width: 1900px){
+    .contenedorIndex{
+        @include contenedor ($fondoSitio,1fr 1fr 1fr,1fr 1fr 3fr 1fr,"header header header"
+        "section1 section1 section1"
+        "section2 section3 section4"
+        "footer footer footer",0,60%) 
+    }
+
+    .contenedorNosotros{
+
+        @include contenedor ($fondoSitio,
+        1fr 1fr,
+        1fr 1fr 1fr 1fr 1fr 1fr,
+            "header header"
+            "opciones opciones"
+            "quienesSomos quienesSomos"
+            "equipo equipo"
+            "cargo1 cargo2"
+            "footer footer",0,60%)
+    }
+
+    .contenedorSoluciones{
+
+        @include contenedor ($fondoSitio,
+        1fr,
+        1fr 1fr 1fr 1fr 1fr,
+            "header"
+            "solucionesWeb"
+            "integraciones" 
+            "desktop"
+            "footer",0,60%)
+        
+    }
+    
+    .contenedorPortafolio{
+    
+        @include contenedor ($fondoSitio,
+        1fr,
+        1fr 1fr 1fr,
+            "header"
+            "portafolio"
+            "footer",0,60%)
+        
+    }
+
+    .contenedorContacto{
+    
+        @include contenedor ($fondoSitio,
+        1fr,
+        1fr 1fr 1fr,
+            "header"
+            "contacto"
+            "footer",0,60%)
+        
+    }
+
+
+}
+
+// @media screen and  (min-width: 400px) {
+//     .contenedorNosotros{
+
+//         @include contenedor (azure,
+//         1fr 1fr,
+//         1fr 1fr 1fr 1fr 1fr 1fr,
+//             "header header"
+//             "opciones opciones"
+//             "quienesSomos quienesSomos"
+//             "equipo equipo"
+//             "cargo1 cargo2"
+//             "footer footer",20px,90%)
+//     }
+// }

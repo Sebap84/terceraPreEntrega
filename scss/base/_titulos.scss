@@ -7,16 +7,17 @@
     padding: 0;
 }
 
-.solucionesWebTitulo{
-    text-align: left;
-    padding-left: 30px;
+.contactoTitulo{
+    font-family:'Roboto', sans-serif;  
+    font-size: x-large;
 }
 
-.integracionesTitulo{
-    text-align: right;
-    padding-right: 40px;
-    
+.contactoLabel{
+    font-family:'Roboto', sans-serif;  
+    font-size: large;
 }
+
+
 
 @media screen and (max-width: 480px){
     .solucionesWebTitulo{
@@ -24,14 +25,62 @@
     }
 
     .integracionesTitulo{
-        padding-right: 70px;
+        text-align: center;
+    }
     
+}
+
+/* Notebooks */
+@media screen and (min-width: 1024px){
+    .solucionesWebTitulo{
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .integracionesTitulo{
+        text-align: right;
+        padding-right: 40px;
 
     }
     
 }
 
-// .nosotros{
-//     z-index: 2;
-//     position: relative;
-// }
+/* Smartphones (landscape) */
+@media only screen and (max-width : 1024px) {
+    .solucionesWebTitulo{
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 30px;
+        
+    }
+    .integracionesTitulo{
+        text-align: right;
+        padding-right: 10px;
+
+    }
+    .solucionesDesktop{
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 30px;
+        
+    }
+
+}
+
+/* Smartphones (portraits) */
+@media screen and (max-width: 480px){
+    .solucionesWebTitulo{
+        margin-left: 60px;
+        
+    }
+    .integracionesTitulo{
+        padding-right: 60px;
+
+    }
+    .solucionesDesktop{
+        margin-left: 30px;
+        
+    }
+}
+
+

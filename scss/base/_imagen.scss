@@ -4,27 +4,85 @@
     margin-top: 10px;
 }
 
-.imagenSoluciones{
-    width: 250px;
+
+
+/* Notebooks */
+@media screen and (min-width: 1024px){
+    .imagenSoluciones{
+        width: 250px;
+    }
+    .DerechaImagen{
+        width: 250px;
+        height: 200px;
+        margin-left: 1100px;
+    }
+    .imagenCliente{
+    margin-left: 120px;
+    width: 200px;
+    margin-bottom: 50px;
+    }
+}
+/* Smartphones (landscape) */
+@media only screen and (max-width : 1024px) {
+    .imagenCliente{
+        width: 90px;
+        margin-left: 70px;
+        margin-bottom:40px ;
+    }
+    .imagenSoluciones{
+        width: 200px;
+        margin-left:20px;
+    }
+    .DerechaImagen{
+        width: 200px;
+        // height: 200px;
+        margin-left: 550px;
+    }
+
 }
 
-.DerechaImagen{
-    width: 250px;
-    height: 200px;
-    margin-left: 1100px;
-}
-
+/* Smartphones (portraits) */
 @media screen and (max-width: 480px){
     .imagenSoluciones{
         width: 120px;
-        margin-left:140px;
+        margin-left:120px;
     }
     .DerechaImagen{
         width: 120px;
         height: 120px;
-        margin-left: 140px;
+        margin-left: 120px;
+    }
+    .imagenCliente{
+        width: 120px;
+        margin-left: 120px;
     }
 }
+// @media screen and (min-width: 1900px){
+//     .imagenSoluciones{
+//         width: 250px;
+//     }
+//     .DerechaImagen{
+//         width: 250px;
+//         height: 200px;
+//         margin-left: 1380px;
+//     }
+// }
+
+
+.slide{
+    width: 100%;
+}
+
+
+
+// @media screen and (max-width: 480px){
+//     .imagenCliente{
+//         width: 150px;
+//         margin-left: 50px;
+//     }
+// }
+
+
 
 
 

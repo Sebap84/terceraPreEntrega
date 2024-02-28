@@ -1,0 +1,13 @@
+.centrarBoton{
+    display: block;
+    margin: 0 auto;
+   
+}
+
+.colorBoton{
+    background: rgb(233, 178, 233);
+    font-weight: bold;
+    &:hover{
+        background-color: rgb(19, 234, 234);
+    }
+}
