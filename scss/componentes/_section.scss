@@ -10,29 +10,12 @@
 
 @mixin tipoSeccion2($gridArea, $height, $bgColor, $textAlign, $width, $marginRight,$marginLeft,$paddingRight){
     background-color: $bgColor;
-    // border: solid black 3px; 
     grid-area: $gridArea;
     text-align: $textAlign;
     @if $height != 0{
     height: $height;
 
     }
-    // @if $width > 0{
-    //     width: $width;
-    // }
-    // @if $marginRight != 0{
-    //     margin-right: $marginRight;
-    // }
-
-    // @if $marginLeft != 0{
-    //     margin-left:$marginLeft;
-    // }
-
-    // @if $paddingRight != 0{
-    //     padding-right:$paddingRight;
-    // }
-
-
 
 }
 

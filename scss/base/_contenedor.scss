@@ -20,6 +20,9 @@
 
 }
 
+
+
+
 .contenedorIndex{
 
     @include contenedor ($fondoSitio,1fr 1fr 1fr,1fr 1fr 3fr 1fr,"header header header"
@@ -27,6 +30,7 @@
         "section2 section3 section4"
         "footer footer footer",0,90%)
 }
+
 
 .contenedorNosotros{
 
@@ -137,12 +141,6 @@
 }
 
 @media screen and (min-width: 1900px){
-    .contenedorIndex{
-        @include contenedor ($fondoSitio,1fr 1fr 1fr,1fr 1fr 3fr 1fr,"header header header"
-        "section1 section1 section1"
-        "section2 section3 section4"
-        "footer footer footer",0,60%) 
-    }
 
     .contenedorNosotros{
 
@@ -194,18 +192,3 @@
 
 
 }
-
-// @media screen and  (min-width: 400px) {
-//     .contenedorNosotros{
-
-//         @include contenedor (azure,
-//         1fr 1fr,
-//         1fr 1fr 1fr 1fr 1fr 1fr,
-//             "header header"
-//             "opciones opciones"
-//             "quienesSomos quienesSomos"
-//             "equipo equipo"
-//             "cargo1 cargo2"
-//             "footer footer",20px,90%)
-//     }
-// }
